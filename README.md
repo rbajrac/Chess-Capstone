@@ -40,8 +40,30 @@ This is determined empirically by Lichess using the Glicko2 rating system and is
   **Sampled rows that integrated the encdoed grid (sequential)**
   ![Sequential DataFrame Preview](./Images/Sequential-DF.png)
  
+## Predictive Modeling Performances
+| Machine Learning Algorithms                             | Training Performance (R-Squared) | Testing Performance (R-Squared) |
+|------------------------------------------|-----------------------------------|----------------------------------|
+| Linear Regressor                         | 0.29                              | 0.29                             |
+| Quadratic Regressor (Degree = 2)         | 0.30                              | 0.30                             |
+| K-NN Regressor                           | 0.31                              | 0.29                             |
+| Decision Tree Regressor                  | 0.32                              | 0.32                             |
+| Random Forest                            | 0.32                              | 0.32                             |
+| Stacked Model (Decision Tree and Quadratic) | 0.32                              | 0.32                             |
+| DBSCAN Clustering + Decision Tree Regressor | Range from 0.32 to 0.42          | Range from 0.31 to 0.23          |
 
-  
+**All traditional machine learning algorithms presented in the table above used only the numeric features to predict the difficulty of chess puzzles.**
+
+| Deep Learning Algorithm                                         | Training Performance (R-Squared) | Testing Performance (R-Squared) |
+|-----------------------------------------------------------------|-----------------------------------|----------------------------------|
+| Fully Connected Neural Network                                 | 0.31                              | 0.31                             |
+| Fully Connected Neural Network with Initial Chessboard Position | 0.37                              | 0.31                             |
+| Fully Connected Neural Network with Initial and Final Chessboard Position | 0.37                              | 0.30                             |
+| Convolution Neural Network with Initial Chessboard Position    | 0.37                              | 0.35                             |
+| Convolution Neural Network with Initial and Final Chessboard Position | 0.42                              | 0.31                             |
+| Architecture with SimpleRNN                                     | 0.47                              | 0.39                             |
+| Architecture with LSTM                                          | 0.47                              | 0.42                             |
+
+**All deep learning algorithms listed in the table above utilize both numeric features and some or all aspects of the encoded grid. The exception is the first fully connected neural network, which serves as a reference for comparing the predictive performance of the encoded grid."**
 
  
  
