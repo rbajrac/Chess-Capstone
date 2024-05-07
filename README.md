@@ -33,6 +33,16 @@ This is determined empirically by Lichess using the Glicko2 rating system and is
   
 - **Number of Moves in Solution:** This feature counts the moves required to complete the solution sequence (i.e., solution length).
 
+  ## Encoded Grid and Sequential Features
+  ![Encoded Grid](./Images/Encoded-Grid.png)
+  **Note:** The computation for the encoded grid can be retrieved by refering to the python notebook within the data folder
+
+  **Sampled rows that integrated the encdoed grid (sequential)**
+  ![Sequential DataFrame Preview](./Images/Sequential-DF.png)
+ 
+
+  
+
  
  
 
