@@ -66,6 +66,9 @@ This is determined empirically by Lichess using the Glicko2 rating system and is
 **All deep learning algorithms listed in the table above utilize both numeric features and some or all aspects of the encoded grid. The exception is the first fully connected neural network, which serves as a reference for comparing the predictive performance of the encoded grid.**
 
 ## Model Selection: Architecture with LSTM
+The following deep learning model seems to perform the best with both the training and testing dataset. The model includes three numerical features processed through a dense layer (32 neurons, ReLU activation). Board state inputs are sequences of matrices padded to a constant length of 30 (30x9x8x1). They undergo convolutional layers for spatial features, followed by pooling, flattening, and then a bidirectional LSTM layer (64 units). The outputs from both branches are merged and processed by an additional dense layer. The model's final output is a single neuron for regression with linear activation.
+
+
 
 
  
