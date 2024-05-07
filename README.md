@@ -63,7 +63,10 @@ This is determined empirically by Lichess using the Glicko2 rating system and is
 | Architecture with SimpleRNN                                     | 0.47                              | 0.39                             |
 | Architecture with LSTM                                          | 0.47                              | 0.42                             |
 
-**All deep learning algorithms listed in the table above utilize both numeric features and some or all aspects of the encoded grid. The exception is the first fully connected neural network, which serves as a reference for comparing the predictive performance of the encoded grid."**
+**All deep learning algorithms listed in the table above utilize both numeric features and some or all aspects of the encoded grid. The exception is the first fully connected neural network, which serves as a reference for comparing the predictive performance of the encoded grid.**
+
+## Model Selection: Architecture with LSTM
+
 
  
  
