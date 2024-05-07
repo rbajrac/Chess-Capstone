@@ -72,10 +72,17 @@ The following deep learning model seems to perform the best with both the traini
 ![Selected Model's Architecture](./Images/Selected-Model.png)
 
 ## Application
+[Google Collab: Decoding Chess Puzzle Difficulty](Application/DecodingChessPuzzleDifficulty.ipynb)
 
 
+## Executive Summary of Project Findings
 
+- **Research Question 1:** Despite employing various algorithms, including simple decision trees and more complex techniques like stacking and clustering, model performance stagnates with an R-squared value of 0.32 on the test dataset This indicates that while simple models demonstrate some predictive power, they are limited in explaining variance in numerical features, resulting in a plateau around R-squared value of 0.32.
+- **Research Question 2:** Models integrating Recurrent Neural Networks (RNNs) to process board states alongside dense layers for numerical inputs showed the best performance, thus far. The most successful model utilized a bidirectional LSTM layer for the RNN component. Performance notably improved with larger training datasets, indicating the importance of data volume in enhancing model efficacy.
 
+  - Creating a predictive model for puzzle difficulty assessment is feasible, though achieving high performance may depend on feature availability, advancements in deep learning architectures, and access to sufficient hardware for training on large datasets.
+  - The selected model already shows considerable improvement in guessing difficulty levels.
+  - Integrating more significant numerical features could further enhance model performance, but leveraging sequences of positions with RNNs remains informative.
  
  
 
